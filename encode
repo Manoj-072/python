@@ -1,0 +1,15 @@
+def encode(s):
+    e=''
+    c=1 
+    for i in range(len(s)-1):
+        if s[i]==s[i+1]:
+            c=c+1 
+            i=i+1 
+        else:
+            e=e+str(c)+s[i]
+            i=i+1 
+            c=1 
+    e=e+str(c)+s[i] 
+    return(e)
+s=input('enter string')
+print(encode(s))
