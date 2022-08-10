@@ -1,0 +1,24 @@
+ d={}
+for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        d[name]=score
+
+l=[]
+for i in d:
+    l.append(d[i])
+
+l=list(sorted(set(l)))
+
+a=min(l)
+l.remove(a)
+x=min(l)
+m=[]
+for j in d:
+    if d[j]==x:
+        m.append(j)
+m=sorted(m)
+for i in m:
+    print(i)
+        
+
