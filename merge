@@ -1,0 +1,29 @@
+def merge_the_tools(s,k):
+    
+    
+    x=len(s)
+    a=x/k
+    v=k
+    j=0
+    m=[]
+    for i in range(k):
+        #print(s[j:k])
+        m.append(s[j:k])
+        #print(j,k)
+        j=j+v
+        k=k+v
+    for i in m:
+        print(dup(i))
+
+
+def dup(s):
+    l=[]
+    for i in s:
+         if i not in l:
+            l.append(i)
+    s1=''.join(l)
+    return(s1)
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
