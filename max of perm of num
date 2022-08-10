@@ -1,0 +1,22 @@
+x=[]
+def per(s, i=0):
+
+    if i == len(s):   	 
+        print("".join(s))
+        x.append("".join(s))
+    for j in range(i, len(s)):
+        w = [c for c in s]
+        # swap
+        w[i], w[j] = w[j], w[i]
+        per(w, i + 1)
+        
+l=[1,2,3]
+s=''
+for i in l:
+    s=s+str(i)
+    
+per(s)
+print('***')
+print(max(x))
+    
+    
