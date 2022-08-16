@@ -1,0 +1,17 @@
+n=int(input())
+l=[]
+for i in range(n):
+    x=input()
+    l.append(x)
+a=len(list(set(l)))
+print(a)
+d={}
+for j in l:
+    if j in d:
+        d[j]=d[j]+1  
+    else:
+        d[j]=1
+g=d.values()
+#print(g)
+for m in g:
+    print(m,end=' ')
