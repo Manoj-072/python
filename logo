@@ -1,0 +1,50 @@
+ def col(l):
+     l1=[]
+    #l2=l[:3]
+    #print(l2)
+     for i in l:
+         for j in i:
+             l1.append(j)
+     return l1
+def freq(l,d):
+    for i in l:
+        if i in d:
+            print(i,d[i])
+def redu(l):
+    l1=[]
+    for i in l:
+        if i not  in  l1:
+            l1.append(i)
+            
+    return(l1)    
+s=input()
+d={}
+for i in s:
+    if i in d:
+        d[i]=d[i]+1 
+    else:
+        d[i]=1
+k=list(set(list(d.values())))
+#print(k)
+a=[]
+while(1):
+    x=max(k)
+    #print(x)
+    #c=k.count(x)
+    l1=[]
+    for i in d:
+        if d[i]==x:
+            l1.append(i)
+            #print(l1)
+            l1.sort()
+    a.append(l1)
+    k.remove(x)
+    if len(k)==0:
+        break
+#print(a)
+a1=redu(a)
+a2=col(a1)
+#print(a2)
+a3=a2[:3]
+#print(a1)
+freq(a3,d)
