@@ -1,0 +1,19 @@
+T = int(input())
+
+for i in range(T):
+        NC = int(input())
+        SL = list(map(int, input().split()))
+        my_list = []
+
+        for item in range(NC):
+                if SL[0] >= SL[-1]:
+                        popvalue = SL.pop(0)
+                        my_list.append(popvalue)
+                else:
+                        popvalue = SL.pop(-1)
+                        my_list.append(popvalue)
+
+        if my_list == sorted(my_list, reverse=True):
+                print('Yes')
+        else:
+                                print('No')
